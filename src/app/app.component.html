@@ -1,0 +1,15 @@
+
+
+<div id="dropdown-component">
+  <div class="selected" (click)="toggleMenu()">
+    <span>{{ selectedValue }}</span>
+    <span [ngClass]="{ 'arrow-down': menuOpen }">&#x203A;</span>
+  </div>
+  <div class="menu-wrapper">
+    <ul #listElem>
+      <li *ngFor="let item of listElems" (click)="clickHandler(item)">
+        <a href="#" clickDirective>{{ item }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
